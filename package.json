@@ -1,0 +1,35 @@
+{
+  "name": "twauth",
+  "version": "1.0.0",
+  "description": "Simple script to authenticate to Twitter",
+  "main": "index.js",
+  "bin": {
+    "twauth": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hbang/twauth.git"
+  },
+  "keywords": [
+    "twitter",
+    "authentication",
+    "oauth",
+    "auth",
+    "login"
+  ],
+  "author": "Adam D (kirb)",
+  "contributors": [
+    "Adam D (kirb)",
+    "Tane Piper"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/hbang/twauth/issues"
+  },
+  "homepage": "https://github.com/hbang/twauth",
+  "dependencies": {
+    "colors": "^1.0.3",
+    "oauth": "^0.9.12",
+    "optimist": "^0.6.1"
+  }
+}
