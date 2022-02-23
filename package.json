@@ -1,35 +1,60 @@
 {
-  "name": "twauth",
-  "version": "1.0.1",
-  "description": "Simple script to authenticate to Twitter",
-  "main": "index.js",
-  "bin": {
-    "twauth": "index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:hbang/twauth.git"
-  },
-  "keywords": [
-    "twitter",
-    "authentication",
-    "oauth",
-    "auth",
-    "login"
-  ],
-  "author": "Adam D (kirb)",
-  "contributors": [
-    "Adam D (kirb)",
-    "Tane Piper"
-  ],
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/hbang/twauth/issues"
-  },
-  "homepage": "https://github.com/hbang/twauth",
-  "dependencies": {
-    "colors": "^1.0.3",
-    "oauth": "^0.9.12",
-    "optimist": "^0.6.1"
-  }
+	"name": "twauth",
+	"version": "1.1.0",
+	"description": "Command line tool to quickly authenticate a user against the Twitter API",
+	"author": "Adam Demasi <adam@chariz.com>",
+	"contributors": [
+		"Tane Piper <me@tane.dev>"
+	],
+	"license": "Apache-2.0",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"bin": {
+		"twauth": "./dist/index.cjs"
+	},
+	"scripts": {
+		"build": "tsup ./src/index.ts --format cjs --dts --clean",
+		"lint": "eslint ./src",
+		"lint:fix": "pnpm -s lint -- --fix",
+		"prepublishOnly": "pnpm -s run build",
+		"push": "np",
+		"test": "pnpm -s lint"
+	},
+	"keywords": [
+		"twitter",
+		"authentication",
+		"oauth",
+		"auth",
+		"login",
+		"token"
+	],
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kirb/twauth.git"
+	},
+	"bugs": {
+		"url": "https://github.com/kirb/twauth/issues"
+	},
+	"homepage": "https://github.com/kirb/twauth#readme",
+	"dependencies": {
+		"chalk": "^4.1.0",
+		"inquirer": "^8.2.0",
+		"oauth": "^0.9.15",
+		"open": "^8.4.0"
+	},
+	"devDependencies": {
+		"@types/inquirer": "^8.2.0",
+		"@types/node": "^17.0.19",
+		"@types/oauth": "^0.9.1",
+		"@typescript-eslint/eslint-plugin": "^5.12.1",
+		"@typescript-eslint/parser": "^5.12.1",
+		"eslint": "^8.9.0",
+		"eslint-config-chariz": "^1.1.0",
+		"np": "^7.6.0",
+		"tsup": "^5.11.13",
+		"typescript": "^4.5.5"
+	}
 }
