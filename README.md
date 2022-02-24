@@ -38,7 +38,7 @@ https://api.twitter.com/oauth/authorize?oauth_token=123-4567890ABCDEFGHabcdefgh
 Access token:  123456789-ABCDEFGabcdefg0123456789ABCDEFGabcdefg01
 Access secret: ABCDEFGabcdefg0123456789ABCDEFGabcdefg0123456
 
-Now save these two values, along with your origional consumer key and secret,
+Now save these two values, along with your original consumer key and secret,
 and use them in your Twitter app. Have fun!
 ```
 
